@@ -85,13 +85,100 @@ namespace _01_Console
 
 
             //이름, 레벨, hp, 경험치를 각각 입력받고 출력하는 코드 만들기
+            //int level = 1;
+            //int hp = 10;
+            //float exp = 0.9f; //90%
+            //string name = "농심너구리";
+
+            //Console.Write($"이름 : {name} \n HP : {hp} \n exp : {exp}");
+
+            // 변수끝 -----------------------------------------------------------------------------------------------
+
+            //조건문(Control statement)-----------------------------------------------------------------------
+            //실행되는 코드 라인을 변경할 수 있는 코드
             int level = 1;
             int hp = 10;
             float exp = 0.9f; //90%
-            string name = "농심너구리";
+            string name = "너굴맨";
 
-            Console.Write($"이름 : {name} \n HP : {hp} \n exp : {exp}");
-            
+            hp = 10;
+            if (hp < 3) //hp가 2이기 때문에 참. 코드 실행
+            {
+                Console.WriteLine("죽기 직전입니다"); //(hp<3) 실행 코드
+            }
+            else if (hp < 10)
+            {
+                Console.WriteLine("HP가 안정적입니다");   //(hp<10) 실행 코드
+            }
+            else
+            {
+                Console.WriteLine("HP가 전부 찼습니다."); // 위 조건문들이 모두 거짓일때 실행 코드
+            }
+
+            switch (hp)
+            {
+                case 0: //hp가 0일때
+                    Console.WriteLine("HP가 0입니다");
+                    break;
+                case 5: //hp가 5일때
+                    Console.WriteLine("HP가 5입니다");
+                    break;
+                default:    //나머지
+                    Console.WriteLine("HP가 0과 5가 아닙니다");
+                    break;
+            }
+
+           
+
+            string temp = Console.ReadLine();
+
+            //실습 : exp의 값과 추가로 입력받은 경험치의 합이 1이상이면 "레벨업"이라고 출력하고 1미만이면 합계를 출력하는 코드
+
+            //exp = 0.5f;
+            //Console.WriteLine("경험치를 추가합니다");
+            //Console.Write("추가할 경험치 : ");
+            //string temp = Console.ReadLine();
+
+            //float tempExp;
+            //float.TryParse(temp, out tempExp);
+            //if((exp + tempexp)> 1.0f)
+            //{
+            //    Console.WriteLine("레벨업!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"현재 경험치 : {exp+tempExp}");
+            //}
+
+            //조건문 끝=-=========================================================================================
+
+            //반복문
+
+            level = 1;
+            while (level < 3)   //참이면 코드 실행
+            {
+                Console.WriteLine($"현재 레벨 : {level}");
+                level++; // level = level + 1; //level += 1;   //셋 다 같은 코드
+                //level += 2; //level에 2를 더해라
+            } //3보다 작을때까지 실행하다가 3보다 작지 않으면 종료
+
+            //i는 0에서 시작해서 3보다 작으면 계속 {}코드를 시행
+            hp = 10;
+            for (int i=0; i<3; i++)  
+            {
+                Console.WriteLine($"현재 HP : {hp}");
+                hp += 10;
+            }
+            Console.WriteLine($"최종 HP : {hp}");
+
+            //실습 : 렙업 할때까지 계속 추가 경험치를 입력하도록 하는 코드를 작성
+            exp = 0.0f;
+            Console.WriteLine("경험치를 추가합니다");
+            Console.Write("추가할 경험치 : ");
+            string temp = Console.ReadLine();
+
+
+
 
             Console.ReadKey();                  // 키 입력 대기하는 코드
             // 실습 완료
