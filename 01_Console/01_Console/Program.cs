@@ -9,16 +9,18 @@ namespace _01_Console
 {
     internal class Program
     {
-        public class Orc   //오크 설계 
+        public class Orc   //오크 클래스
         {
+            int name = ("오크");
             int HP = 20;
             int MaxHP = 20;
             int ATT = 5;
             int DEF = 5;
         }
 
-        public class Human    //인간 설계
+        public class Human    //인간 클래스
         {
+            int name = ("너굴맨");
             int HP = 100;
             int MaxHP = 100;
             int ATT = 10;
@@ -29,25 +31,20 @@ namespace _01_Console
 
         static void Main(string[] args) //함수
         {
-            // 주말과제용
+            
             Human player = new Human();
             Orc enemy = new Orc();
 
-            public void Attack(Character01 target)
+            public void Attack(Orc target)
             {
-                int damage = ;
-
-                //rand.NextDouble();  // 0.0 ~ 1.0
-                if (rand.NextDouble() < 0.3f)   // 이 조건이 참이면 30% 안쪽으로 들어왔다.
-                {
-                    damage *= 2;    // damage = damage * 2;
-                    Console.WriteLine("크리티컬 히트!");
-                }
+                int damage = Human.ATT;
 
                 Console.WriteLine($"{name}이 {target.Name}에게 공격을 합니다.(공격력 : {damage})");
                 target.TakeDamage(damage);
+
+                Console.ReadKey();
             }
-            Console.ReadKey();
+            
         }   
     }
 }
