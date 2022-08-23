@@ -9,19 +9,10 @@ namespace _01_Console
 {
     internal class Program
     {
-        // 스코프(Scope) : 변수나 함수를 사용할 수 있는 범위. 변수를 선언한 시점에서 해당 변수가 포함된 중괄호가 끝나는 구간까지
+        
         static void Main(string[] args)
         {
-            //int sumResult = Sum(10, 20);        // break point (단축키 F9)
-            //Console.WriteLine($"SumResult : {sumResult}");
-            //Print();
-            //Test_Function();
-            //Test_GuGudan();
-            //Test_Character();
-            //Test_Human();
-
-            // 주말과제용
-
+            
             Human player;
             string result;
             do
