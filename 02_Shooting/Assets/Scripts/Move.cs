@@ -59,8 +59,13 @@ public class Move : MonoBehaviour
         {
             Debug.Log("입력들어옴 - canceled");
         }
-        Vector2 inputDir = context.ReadValue<Vector2>();
+        Vector2 inputDir = context.ReadValue<Vector2>();    //방향 움직임 입력받음
         Debug.Log(inputDir);
+        dir = inputDir; //dir.x = inputDir.x; dir.y = inputDir.y; dir.z = 0.0f;
+
+        //vector : 방향과 크기
+        //vector2 : 유니티에서 제공하는 구조체(struct). 2차원 벡터를 표현하는 구조체(x,y)
+        //vector3 : 3차원 벡터값 (x,y,z)
     }
 
     public void FireInput(InputAction.CallbackContext context)
@@ -76,7 +81,7 @@ public class Move : MonoBehaviour
         //Input Manager를 이용한 입력 처리 (요즘은 다른걸 씀) -눌려질때까지 입력입력입력
         //하는 일이 없는데 배터리를 잡아먹는 사용상태 >> Big - Little 구조로 바뀜(저,고 배터리 sleep모드 활성화)
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W)) 
         {
             Debug.Log("W가 눌러졌다.");
             dir = Vector3.up;
