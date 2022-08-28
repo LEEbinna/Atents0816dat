@@ -105,7 +105,8 @@ public class Move : MonoBehaviour
             dir = Vector3.right;
         }
     }
-
+    //delegate : 함수를 저장하는 변수
+    // -> 발생되는 클래스와 기능이 실행되는 클래스가 다를때 사용할 수 있는 변수
 
 
 
