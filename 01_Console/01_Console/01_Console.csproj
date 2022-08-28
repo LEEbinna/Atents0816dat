@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4548DA10-F727-4B4E-8033-EF9DBDFE56DE}</ProjectGuid>
+    <ProjectGuid>{E4372628-F461-427E-A451-ADD4C8853BC3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_01_Console</RootNamespace>
     <AssemblyName>01_Console</AssemblyName>
@@ -43,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Human.cs" />
+    <Compile Include="Orc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="실습.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
