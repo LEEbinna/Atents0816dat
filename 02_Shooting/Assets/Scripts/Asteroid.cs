@@ -11,6 +11,17 @@ public class Asteroid : MonoBehaviour
 
     GameObject explosion;
 
+    private void Awake()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        sprite.flipX = true;
+        sprite.flipY = false;
+
+        int rand = Random.Range(0, 100) % 2;
+        sprite.flipX = (rand == 0);
+
+    }
+
     private void Start()
     {
         explosion = transform.GetChild(0).gameObject;
